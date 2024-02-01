@@ -17,7 +17,7 @@ function App() {
         >
           Learn React
         </a>
-        <p>Car Rent</p>
+        <p>App for Car Rent in Ukraine</p>
       </header>
     </div>
   );
