@@ -3,6 +3,7 @@ import {
   CarItemWrapper,
   CardImgWrapper,
   FavoriteBtn,
+  ModalItemWrapper,
   customStyles,
 } from "./CarItem.styled";
 import { selectFavorites } from "../../redux/selectors";
@@ -100,31 +101,33 @@ export const CarItem = (carItem) => {
         onRequestClose={onCloseModal}
         style={customStyles}
       >
-        <div>
-          <button type="button" onClick={onCloseModal}>
-            X-icon
-          </button>
+        <ModalItemWrapper>
           <div>
-            <img src={img} loading="lazy" alt={make} title={make} />
+            <button type="button" onClick={onCloseModal}>
+              X-icon
+            </button>
+            <div>
+              <img src={img} loading="lazy" alt={make} title={make} />
+            </div>
+            <p>{make}</p>
+            <p>{model}</p>
+            <p>{year}</p>
+            <p>{address}</p>
+            <p>id:{id}</p>
+            <p>Year:{year}</p>
+            <p>Type:{type}</p>
+            <p>Fuel Consumption:{fuelConsumption}</p>
+            <p>Engine Size:{engineSize}</p>
+            <p>{description}</p>
+            <p>Accessories and functionalities:</p>
+            <p>{accessories}</p>
+            <p>{functionalities}</p>
+            <p>Rental Conditions:{rentalConditions}</p>
+            <p>Mileage:{mileage}</p>
+            <p>Price:{rentalPrice}</p>
+            <button href="tel:+380730000000">Rental car</button>
           </div>
-          <p>{make}</p>
-          <p>{model}</p>
-          <p>{year}</p>
-          <p>{address}</p>
-          <p>id:{id}</p>
-          <p>Year:{year}</p>
-          <p>Type:{type}</p>
-          <p>Fuel Consumption:{fuelConsumption}</p>
-          <p>Engine Size:{engineSize}</p>
-          <p>{description}</p>
-          <p>Accessories and functionalities:</p>
-          <p>{accessories}</p>
-          <p>{functionalities}</p>
-          <p>Rental Conditions:{rentalConditions}</p>
-          <p>Mileage:{mileage}</p>
-          <p>Price:{rentalPrice}</p>
-          <button href="tel:+380730000000">Rental car</button>
-        </div>
+        </ModalItemWrapper>
       </Modal>
     </CarItemWrapper>
   );

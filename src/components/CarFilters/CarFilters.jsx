@@ -37,7 +37,6 @@ export const CarFilters = () => {
   const carPricesList = [{ value: "all", label: "All" }, ...carPrices];
 
   const handleBrandSelect = (e) => {
-    console.log(e);
     dispatch(setFilter({ ...filter, page: 1, carBrand: e }));
   };
 

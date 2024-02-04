@@ -56,3 +56,8 @@ export const FavoriteBtn = styled.button`
     scale: 1.2;
   }
 `;
+
+export const ModalItemWrapper = styled.div`
+  width: 541px;
+  height: 752px;
+`;
